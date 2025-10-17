@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 45 60% 95%;
+    --foreground: 219 67% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 219 67% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 219 67% 12%;
+
+    --primary: 253 43% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 248 47% 43%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 253 20% 95%;
+    --muted-foreground: 219 40% 40%;
+
+    --accent: 6, 26%, 44%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 253 20% 85%;
+    --input: 253 20% 85%;
+    --ring: 253 43% 58%;
+
+    --radius: 0.75rem;
+
+    --gradient-primary: linear-gradient(135deg, hsl(253 43% 58%), hsl(248 47% 43%));
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%), hsl(0 0% 98%));
+    --shadow-glow: 0 0 30px hsl(253 43% 58%);
+    --shadow-card: 0 10px 30px -10px hsl(7, 37%, 60%);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .dark {
+    --background: 219 67% 8%;
+    --foreground: 45 60% 74%;
+
+    --card: 219 67% 12%;
+    --card-foreground: 45 60% 74%;
+
+    --popover: 219 67% 12%;
+    --popover-foreground: 45 60% 74%;
+
+    --primary: 253 43% 58%;
+    --primary-foreground: 219 67% 8%;
+
+    --secondary: 248 47% 43%;
+    --secondary-foreground: 45 60% 74%;
+
+    --muted: 219 67% 15%;
+    --muted-foreground: 253 20% 65%;
+
+    --accent: 45 60% 74%;
+    --accent-foreground: 219 67% 8%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 45 60% 74%;
+
+    --border: 248 47% 20%;
+    --input: 248 47% 20%;
+    --ring: 253 43% 58%;
+
+    --gradient-primary: linear-gradient(135deg, hsl(253 43% 58%), hsl(248 47% 43%));
+    --gradient-card: linear-gradient(180deg, hsl(219 67% 12%), hsl(219 67% 8%));
+    --shadow-glow: 0 0 30px hsl(316, 26%, 41%);
+    --shadow-card: 0 10px 30px -10px hsl(316, 26%, 41%);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+  }
+
+  code, pre, textarea.font-mono {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  }
+  
+  .bg-grid-pattern {
+    background-image: 
+      linear-gradient(to right, hsl(var(--border)) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--border)) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+}
+
+@layer utilities {
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
