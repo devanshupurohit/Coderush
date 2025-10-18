@@ -917,7 +917,7 @@ const Index = () => {
                             </span>
                           </div>
                           <CardTitle className="text-xl text-foreground">
-                            {problem.title}
+                            {isUnlocked ? problem.title : null}
                           </CardTitle>
                         </div>
                         <div className={`ml-2 p-2 rounded-lg ${isUnlocked ? 'bg-primary/10' : 'bg-muted'}`}>
@@ -925,7 +925,7 @@ const Index = () => {
                         </div>
                       </div>
                       <CardDescription className="text-muted-foreground line-clamp-3">
-                        {problem.description}
+                        {isUnlocked ? problem.description : 'Complete the previous challenge to unlock this problem.'}
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
