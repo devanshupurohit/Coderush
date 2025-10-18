@@ -236,7 +236,15 @@ const Index = () => {
             <div className="flex items-center gap-2 md:gap-3">
               <img src="/acm_light.png" alt="ACM" className="h-10 w-auto dark:hidden" />
               <img src="/acm_dark.png" alt="ACM" className="h-10 w-auto hidden dark:block" />
-              <span className="text-sm md:text-base font-semibold tracking-wide text-foreground">CodeRush</span>
+              <button
+                type="button"
+                onClick={() => navigate('/')}
+                className="text-sm md:text-base font-semibold tracking-wide text-foreground focus:outline-none"
+                aria-label="Go to Home"
+                title="Home"
+              >
+                CodeRush
+              </button>
             </div>
             <div className="flex items-center gap-2">
               <Button
