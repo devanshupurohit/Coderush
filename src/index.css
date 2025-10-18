@@ -46,23 +46,24 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 219 67% 8%;
-    --foreground: 45 60% 74%;
+    --background: 220 15% 7%;
+    --foreground: 210 20% 92%;
 
-    --card: 219 67% 12%;
-    --card-foreground: 45 60% 74%;
+    --card: 220 15% 10%;
+    --card-foreground: 210 20% 92%;
 
-    --popover: 219 67% 12%;
-    --popover-foreground: 45 60% 74%;
+    --popover: 220 15% 10%;
+    --popover-foreground: 210 20% 92%;
 
+    /* Keep button colors unchanged */
     --primary: 253 43% 58%;
     --primary-foreground: 219 67% 8%;
 
     --secondary: 248 47% 43%;
     --secondary-foreground: 45 60% 74%;
 
-    --muted: 219 67% 15%;
-    --muted-foreground: 253 20% 65%;
+    --muted: 220 10% 18%;
+    --muted-foreground: 220 10% 70%;
 
     --accent: 45 60% 74%;
     --accent-foreground: 219 67% 8%;
@@ -70,14 +71,14 @@ All colors MUST be HSL.
     --destructive: 0 84% 60%;
     --destructive-foreground: 45 60% 74%;
 
-    --border: 248 47% 20%;
-    --input: 248 47% 20%;
+    --border: 220 15% 18%;
+    --input: 220 15% 18%;
     --ring: 253 43% 58%;
 
     --gradient-primary: linear-gradient(135deg, hsl(253 43% 58%), hsl(248 47% 43%));
-    --gradient-card: linear-gradient(180deg, hsl(219 67% 12%), hsl(219 67% 8%));
-    --shadow-glow: 0 0 30px hsl(316, 26%, 41%);
-    --shadow-card: 0 10px 30px -10px hsl(316, 26%, 41%);
+    --gradient-card: linear-gradient(180deg, hsl(220 15% 12%), hsl(220 15% 8%));
+    --shadow-glow: 0 0 30px hsl(220, 15%, 14%);
+    --shadow-card: 0 10px 30px -10px hsl(220, 15%, 14%);
   }
 }
 
