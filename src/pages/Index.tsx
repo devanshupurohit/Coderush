@@ -946,7 +946,7 @@ const Index = () => {
           {/* Motivational Section */}
           {solvedCount > 0 && (
             <div className="mt-12 text-center animate-fade-in">
-              <div className="inline-block p-6 md:p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-border shadow-glow">
+              <div className="inline-block p-6 md:p-8 rounded-2xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-border">
                 <div className="text-4xl mb-3">🎯</div>
                 <h3 className="text-xl md:text-2xl font-bold text-foreground mb-2">
                   Great Progress!
