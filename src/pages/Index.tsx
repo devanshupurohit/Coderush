@@ -751,8 +751,6 @@ const Index = () => {
   if (currentView === 'signup') {
     return (
       <div className="min-h-screen bg-background relative flex flex-col">
-        <Navbar />
-        <NavbarSpacer />
         <div className="absolute top-4 right-4">
           <ThemeToggle />
         </div>
