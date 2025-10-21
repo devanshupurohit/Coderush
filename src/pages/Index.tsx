@@ -974,20 +974,12 @@ const Index = () => {
   if (currentView === 'editor') {
     const activeProblem = problems.find(p => p.id === currentUser?.activeProblem);
     if (!activeProblem) {
-      return (
-        <div className="min-h-screen bg-background flex flex-col items-center justify-center">
-          <Navbar />
-          <NavbarSpacer />
-          <ThemeToggle />
-          <p className="text-destructive">No problem selected. Please go back and select a problem.</p>
-          <Button variant="outline" onClick={() => navigate('/')}>Back to Home</Button>
-        </div>
-      );
+      navigate('/');
+      return null;
     }
     return (
       <div className="min-h-screen bg-background p-4 md:p-8">
-        <Navbar />
-        <NavbarSpacer />
+ 
         {/* Theme Toggle */}
         <div className="fixed top-4 right-4 z-50">
           <ThemeToggle />
@@ -1010,7 +1002,7 @@ const Index = () => {
               Back to Home
             </Button>
             <div className="flex items-center gap-2">
-              <span className={`text-sm font-semibold uppercase ${getDifficultyColor(activeProblem.level)}`}> 
+              <span className={`text-sm font-semibold uppercase ${getDifficultyColor(activeProblem.level)}`}>
                 {activeProblem.level}
               </span>
             </div>
