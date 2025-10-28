@@ -1052,6 +1052,9 @@ const Index = () => {
                     setIsVerified(false);
                   }}
                   onKeyDown={handleEditorKeyDown}
+                  onPaste={(e) => {
+                    e.preventDefault();
+                  }}
                   placeholder={`// Write your ${selectedLanguage} code here...\n\n`}
                   className="w-full h-64 md:h-96 p-4 bg-background border border-border rounded-lg font-mono text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-smooth"
                 />
