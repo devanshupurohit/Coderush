@@ -247,15 +247,6 @@ const Index = () => {
               </button>
             </div>
             <div className="flex items-center gap-2">
-              <Button
-                variant="outline"
-                onClick={() => navigate('/leaderboard')}
-                className="border-border p-2 w-9 h-9 flex items-center justify-center"
-                aria-label="Leaderboard"
-                title="Leaderboard"
-              >
-                <Trophy className="w-4 h-4" />
-              </Button>
               <Button variant="outline" onClick={handleLogout} className="border-border">
                 Logout
               </Button>
@@ -841,7 +832,7 @@ const Index = () => {
               </h1>
               
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.1s' }}>
-                Challenge yourself with algorithmic problems and climb the leaderboard
+                Challenge yourself with algorithmic problems and improve your coding skills
               </p>
 
               {/* Progress Stats */}
@@ -868,15 +859,6 @@ const Index = () => {
                 </div>
               </div>
 
-              <div className="pt-4">
-                <Button
-                  onClick={() => navigate('/leaderboard')}
-                  className="gradient-primary hover:opacity-90 transition-smooth shadow-glow font-semibold hover-scale"
-                >
-                  <Trophy className="w-4 h-4 mr-2" />
-                  View Leaderboard
-                </Button>
-              </div>
             </div>
           </div>
         </div>
@@ -1053,6 +1035,9 @@ const Index = () => {
                     setIsVerified(false);
                   }}
                   onKeyDown={handleEditorKeyDown}
+                  onPaste={(e) => {
+                    e.preventDefault();
+                  }}
                   placeholder={`// Write your ${selectedLanguage} code here...\n\n`}
                   className="w-full h-64 md:h-96 p-4 bg-background border border-border rounded-lg font-mono text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary resize-none transition-smooth"
                 />
